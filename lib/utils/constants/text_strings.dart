@@ -24,7 +24,8 @@ class FTexts {
   static const String firstName = "First Name";
   static const String lastName = "Last Name";
   static const String regNo = "Registration Number";
-  static const String email = "VIT Bhopal Email address";
+  static const String username = "Username";
+  static const String email = "Email ";
   static const String contact = "Contact";
   static const String joiningYear = "Year of Joining VIT Bhopal";
   static const String hostel = "Hostel";

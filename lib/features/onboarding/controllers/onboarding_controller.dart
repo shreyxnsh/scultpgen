@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sculptgen/features/authentication/screens/login.dart';
 
 
 class OnBoardingController extends GetxController {
@@ -19,7 +20,7 @@ class OnBoardingController extends GetxController {
   void nextPage() {
     if (currentPageIndex.value == 2) {
       // Get.to(LoginScren());
-      // Get.to(const LoginScreen());
+      Get.to(const LoginScreen());
     } else {
       // set page index
       int page = currentPageIndex.value + 1;
