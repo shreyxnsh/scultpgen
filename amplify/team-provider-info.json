@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sculptgen-dev-213817-authRole",
+      "UnauthRoleArn": "arn:aws:iam::631860520135:role/amplify-sculptgen-dev-213817-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::631860520135:role/amplify-sculptgen-dev-213817-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-sculptgen-dev-213817-deployment",
+      "UnauthRoleName": "amplify-sculptgen-dev-213817-unauthRole",
+      "StackName": "amplify-sculptgen-dev-213817",
+      "StackId": "arn:aws:cloudformation:ap-south-1:631860520135:stack/amplify-sculptgen-dev-213817/84d45f90-9388-11ee-85a0-0a27667936b8",
+      "AmplifyAppId": "d195biuih21nij"
+    }
+  }
+}
