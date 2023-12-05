@@ -52,9 +52,9 @@ class FImages {
   static const String verifyIllustration = "assets/images/animations/sammy-line-travel-backpack-with-passport-and-air-ticket.gif";
 
   // -- OnBoarding Texts
-  static const String onBoardingImage1 = "assets/images/on_boarding_images/sammy-line-searching.gif";
-  static const String onBoardingImage2 = "assets/images/on_boarding_images/sammy-line-shopping.gif";
-  static const String onBoardingImage3 = "assets/images/on_boarding_images/sammy-line-delivery.gif";
+  static const String onBoardingImage1 = "assets/gif/scuptgif1.gif";
+  static const String onBoardingImage2 = "assets/gif/scuptgif2.gif";
+  static const String onBoardingImage3 = "assets/gif/scuptgif3.gif";
 
   // -- Products
   static const String productImage1 = "assets/images/products/nike-shoes.png";
