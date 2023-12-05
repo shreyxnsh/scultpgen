@@ -54,6 +54,7 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/gif/
+    - assets/logos/
 
   #--------------- LOCAL FONTS ------------------#
   fonts:
