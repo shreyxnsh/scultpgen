@@ -35,6 +35,7 @@ class FTexts {
   static const String forgetPassword = "Forget Password?";
   static const String signIn = "Sign In";
   static const String createAccount = "Create Account";
+  static const String alreadylogin = "Already have an account?";
   static const String orSignInWith = "or sign in with";
   static const String orSignUpWith = "or sign up with";
   static const String iAgreeTo = "I agree to";
@@ -48,8 +49,10 @@ class FTexts {
   // -- Authentication Headings
   static const String loginTitle = "Welcome back,";
   static const String loginSubTitle =
-      "Discover Limitless Choices and Unmatched Convenience.";
-  static const String signupTitle = "Let’s create your account";
+      "It's been so long, that we're waiting for you";
+      static const String signupSubTitle =
+      "We hope to get smiles on your face :)";
+  static const String signupTitle = "Hey There!";
   static const String forgetPasswordTitle = "Forget password";
   static const String forgetPasswordSubTitle =
       "Don’t worry sometimes people can forget too, enter your email and we will send you a password reset link.";
