@@ -50,8 +50,7 @@ class FTexts {
   static const String loginTitle = "Welcome back,";
   static const String loginSubTitle =
       "It's been so long, that we're waiting for you";
-      static const String signupSubTitle =
-      "We hope to get smiles on your face :)";
+  static const String signupSubTitle = "We hope to get smiles on your face :)";
   static const String signupTitle = "Hey There!";
   static const String forgetPasswordTitle = "Forget password";
   static const String forgetPasswordSubTitle =
@@ -69,8 +68,10 @@ class FTexts {
   static const String yourAccountCreatedSubTitle =
       "Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!";
   static const String kycTitle = "KYC Verification";
-  static const String kycSubTitle =
-      "Enter your details correctly for a smoother on-boarding.";
+  static const String kycSubTitle = "Enter your details correctly for a smoother on-boarding.";
+
+  static const requiredField = "This field is required";
+  static const invalidEmail = "Enter a valid email address";
 
   // -- Product
   static const String popularProducts = "Popular Products";
