@@ -35,6 +35,14 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   capped_progress_indicator: ^0.0.2
 
+  # amplify
+  form_field_validator: ^1.1.0
+  provider: ^6.0.5
+  dartz: ^0.10.1
+  amplify_api: ^1.6.1
+  amplify_flutter: ^1.6.0
+  amplify_auth_cognito: ^1.6.0
+
 
 
   #--------------- ./ PACKAGES END ------------------#
