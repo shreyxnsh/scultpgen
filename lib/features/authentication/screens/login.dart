@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:sculptgen/features/authentication/screens/signup.dart';
 import 'package:sculptgen/utils/constants/colors.dart';
 import 'package:sculptgen/utils/constants/image_strings.dart';
 import 'package:sculptgen/utils/constants/sizes.dart';
@@ -16,6 +17,7 @@ class LoginScreen extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(FSizes.defaultSpace),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -98,7 +100,9 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(SignupScreen());
+                      },
                       child: const Text(FTexts.createAccount),
                     ),
                   ),
@@ -128,7 +132,7 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: FSizes.spaceBtwItems / 2,
+                height: FSizes.spaceBtwItems ,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
