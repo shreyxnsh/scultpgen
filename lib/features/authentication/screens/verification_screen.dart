@@ -7,6 +7,7 @@ import 'package:sculptgen/features/authentication/screens/login.dart';
 import 'package:sculptgen/features/authentication/screens/logo_with_title.dart';
 import 'package:sculptgen/providers/user_provider.dart';
 import 'package:sculptgen/shared/extension.dart';
+import 'package:sculptgen/utils/constants/sizes.dart';
 
 
 class VerificationScreen extends StatefulWidget {
@@ -27,40 +28,46 @@ class _VerificationScreenState extends State<VerificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: LogoWithTitle(
-        title: 'Verification',
-        subText: "Verification code has been sent to your mail",
-        children: [
-          const SizedBox(height: 20),
-          Form(
-            key: _formKey,
-            child: TextFormField(
-              onSaved: (otpCode) {
-                _otpcode = otpCode!;
-              },
-              keyboardType: TextInputType.number,
-              textInputAction: TextInputAction.send,
-              decoration: const InputDecoration(hintText: "Enter OTP"),
+      body: Padding(
+        padding: const EdgeInsets.all(FSizes.defaultSpace),
+        child: LogoWithTitle(
+          title: 'Verification',
+          subText: "Verification code has been sent to your mail",
+          children: [
+            const SizedBox(height: 20),
+            Form(
+              key: _formKey,
+              child: TextFormField(
+                onSaved: (otpCode) {
+                  _otpcode = otpCode!;
+                },
+                keyboardType: TextInputType.number,
+                textInputAction: TextInputAction.send,
+                decoration: const InputDecoration(hintText: "Enter OTP"),
+              ),
             ),
-          ),
-          const SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: () async {
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                final result = await context
-                    .read<UserProvider>()
-                    .confirmSignUp(username: widget.username, code: _otpcode);
-
-                result.fold((error) => context.showError(error), (_) {
-                  Get.to(HomeScreen());
-                });
-              }
-            },
-            child: context.watch<UserProvider>().isLoading ? CircularProgressIndicator(color: Colors.white,)
-            : const Text("Validate"),
-          ),
-        ],
+            const SizedBox(height: 20),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () async {
+                  if (_formKey.currentState!.validate()) {
+                    _formKey.currentState!.save();
+                    final result = await context
+                        .read<UserProvider>()
+                        .confirmSignUp(username: widget.username, code: _otpcode);
+            
+                    result.fold((error) => context.showError(error), (_) {
+                      Get.to(HomeScreen());
+                    });
+                  }
+                },
+                child: context.watch<UserProvider>().isLoading ? CircularProgressIndicator(color: Colors.white,)
+                : const Text("Validate"),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
