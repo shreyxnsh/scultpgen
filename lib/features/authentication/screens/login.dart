@@ -6,6 +6,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:provider/provider.dart';
 import 'package:sculptgen/features/authentication/screens/home.dart';
 import 'package:sculptgen/features/authentication/screens/signup.dart';
+import 'package:sculptgen/navigationmenu.dart';
 import 'package:sculptgen/providers/user_provider.dart';
 import 'package:sculptgen/shared/extension.dart';
 import 'package:sculptgen/utils/constants/colors.dart';
@@ -37,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
         Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(
-            builder: (context) => HomeScreen(),
+            builder: (context) => NavigationMenuScreen(),
           ),
           (route) => false,
         );

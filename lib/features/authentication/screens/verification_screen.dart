@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:sculptgen/features/authentication/screens/home.dart';
 import 'package:sculptgen/features/authentication/screens/login.dart';
 import 'package:sculptgen/features/authentication/screens/logo_with_title.dart';
+import 'package:sculptgen/navigationmenu.dart';
 import 'package:sculptgen/providers/user_provider.dart';
 import 'package:sculptgen/shared/extension.dart';
 import 'package:sculptgen/utils/constants/sizes.dart';
@@ -58,7 +59,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                         .confirmSignUp(username: widget.username, code: _otpcode);
             
                     result.fold((error) => context.showError(error), (_) {
-                      Get.to(HomeScreen());
+                      Get.to(NavigationMenuScreen());
                     });
                   }
                 },
