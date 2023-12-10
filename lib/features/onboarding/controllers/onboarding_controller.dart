@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 import 'package:sculptgen/features/authentication/screens/login.dart';
+import 'package:sculptgen/providers/user_provider.dart';
+import 'package:sculptgen/welcome.dart';
 
 
 class OnBoardingController extends GetxController {
@@ -19,8 +22,8 @@ class OnBoardingController extends GetxController {
 
   void nextPage() {
     if (currentPageIndex.value == 2) {
-      // Get.to(LoginScren());
-      Get.to(const LoginScreen());
+      // FutureBuilder(future: context.read<UserProvider>().checkedLoggedInUser(), builder: (context, snapshot){},)
+      Get.to(const WelcomeScreen());
     } else {
       // set page index
       int page = currentPageIndex.value + 1;

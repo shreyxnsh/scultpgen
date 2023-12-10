@@ -52,7 +52,7 @@ class UserProvider with ChangeNotifier {
     return response;
   }
 
-  Future<AuthUser?> checkedLogedInUser() async {
+  Future<AuthUser?> checkedLoggedInUser() async {
     final authSession = await _userRepositiry.isUserLogedIn();
 
     if (authSession.isSignedIn) {
@@ -73,5 +73,6 @@ class UserProvider with ChangeNotifier {
       _setIsLoading(false);
       return left(e.message); 
     }
+    
   }
 }
