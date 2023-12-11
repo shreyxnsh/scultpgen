@@ -26,6 +26,7 @@ class _SignupScreenState extends State<SignupScreen> {
   final _formKey = GlobalKey<FormState>();
   late String _username, _email, _password;
 
+
   void signUp(String username, String password, String email) async {
     final signUpResult =
         await context.read<UserProvider>().signUp(username, password, email);

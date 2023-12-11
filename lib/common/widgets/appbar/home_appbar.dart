@@ -39,13 +39,13 @@ class ThemeHomeAppBar extends StatelessWidget {
         
         IconButton(onPressed: () async{
 
-          // final response = await context.read<UserProvider>().signOut();
-          // response.fold((error) => context.showError(error), (result) => Get.to(LoginScreen()));
+          final response = await context.read<UserProvider>().signOut();
+          response.fold((error) => context.showError(error), (result) => Get.to(LoginScreen()));
 
-          Get.to(ProfileScreen());
+          // Get.to(ProfileScreen());
         }, 
         
-        icon: context.watch<UserProvider>().isLoading ? CircularProgressIndicator(color: Colors.black,): Icon(Iconsax.profile_circle5), iconSize: 40, color: FColors.primary,)
+        icon: context.watch<UserProvider>().isLoading ? CircularProgressIndicator(color: Colors.black,): Icon(Iconsax.logout), iconSize: 40, color: FColors.primary,)
         
       ],
     );
