@@ -4,7 +4,6 @@ import 'package:iconsax/iconsax.dart';
 import 'package:provider/provider.dart';
 import 'package:sculptgen/common/widgets/appbar/appbar.dart';
 import 'package:sculptgen/features/authentication/screens/login.dart';
-import 'package:sculptgen/features/settings/screens/profile.dart';
 import 'package:sculptgen/providers/user_provider.dart';
 import 'package:sculptgen/shared/extension.dart';
 import 'package:sculptgen/utils/constants/colors.dart';
@@ -40,12 +39,12 @@ class ThemeHomeAppBar extends StatelessWidget {
         IconButton(onPressed: () async{
 
           final response = await context.read<UserProvider>().signOut();
-          response.fold((error) => context.showError(error), (result) => Get.to(LoginScreen()));
+          response.fold((error) => context.showError(error), (result) => Get.to(const LoginScreen()));
 
           // Get.to(ProfileScreen());
         }, 
         
-        icon: context.watch<UserProvider>().isLoading ? CircularProgressIndicator(color: Colors.black,): Icon(Iconsax.logout), iconSize: 40, color: FColors.primary,)
+        icon: context.watch<UserProvider>().isLoading ? const CircularProgressIndicator(color: Colors.black,): const Icon(Iconsax.logout), iconSize: 40, color: FColors.primary,)
         
       ],
     );

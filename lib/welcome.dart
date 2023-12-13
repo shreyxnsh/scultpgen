@@ -23,7 +23,7 @@ class WelcomeScreen extends StatelessWidget {
             Center(
                 child: Column(
                   children : [
-                    Text("Welcome"),
+                    const Text("Welcome"),
                     const SizedBox(
                       height: FSizes.spaceBtwSections,
                     ),
@@ -31,9 +31,9 @@ class WelcomeScreen extends StatelessWidget {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
-                          Get.to(LoginScreen());
+                          Get.to(const LoginScreen());
                         },
-                        child: Text(FTexts.signIn),
+                        child: const Text(FTexts.signIn),
                       ),
                     ),
                     const SizedBox(
@@ -43,9 +43,9 @@ class WelcomeScreen extends StatelessWidget {
                       width: double.infinity,
                       child: OutlinedButton(
                         onPressed: () {
-                          Get.to(SignupScreen());
+                          Get.to(const SignupScreen());
                         },
-                        child: Text(FTexts.createAccount),
+                        child: const Text(FTexts.createAccount),
                       ),
                     ),
             

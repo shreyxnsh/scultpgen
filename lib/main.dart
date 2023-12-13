@@ -23,9 +23,6 @@ Future<void> main() async {
   );
 }
 
-
-
-
 Future<void> configureAmplify() async {
   try {
     final api = AmplifyAPI(modelProvider: ModelProvider.instance);

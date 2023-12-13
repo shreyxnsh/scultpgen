@@ -15,9 +15,9 @@ class _NavigationMenuState extends State<NavigationMenuScreen> {
 
   int _pageIndex = 0;
   final List <Widget> _tabList = [
-    HomeScreen(),
-    ToolScreen(),
-    ProfileScreen()
+    const HomeScreen(),
+    const ToolScreen(),
+    const ProfileScreen()
   ];
 
   @override
@@ -29,9 +29,9 @@ class _NavigationMenuState extends State<NavigationMenuScreen> {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Align(
-              alignment: Alignment(0.0, 1.0),
+              alignment: const Alignment(0.0, 1.0),
               child: ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(30)),
+                borderRadius: const BorderRadius.all(Radius.circular(30)),
                 child: BottomNavigationBar(
                   selectedItemColor: Colors.white,
                   unselectedItemColor: Colors.grey,
@@ -44,7 +44,7 @@ class _NavigationMenuState extends State<NavigationMenuScreen> {
                       _pageIndex = index;
                     });
                   },
-                  items: [
+                  items: const [
                     BottomNavigationBarItem(icon: Icon(Iconsax.home) , label: "Home"),
                     BottomNavigationBarItem(icon: Icon(Iconsax.personalcard) , label: "Account"),
                     BottomNavigationBarItem(icon: Icon(Iconsax.people) , label: "Setting"),
