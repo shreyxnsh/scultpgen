@@ -4,7 +4,6 @@ import 'package:form_field_validator/form_field_validator.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:provider/provider.dart';
-import 'package:sculptgen/features/authentication/screens/home.dart';
 import 'package:sculptgen/features/authentication/screens/signup.dart';
 import 'package:sculptgen/navigationmenu.dart';
 import 'package:sculptgen/providers/user_provider.dart';
@@ -38,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
         Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(
-            builder: (context) => NavigationMenuScreen(),
+            builder: (context) => const NavigationMenuScreen(),
           ),
           (route) => false,
         );
@@ -51,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(FSizes.defaultSpace),
+          padding: const EdgeInsets.all(FSizes.defaultSpace),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -159,7 +158,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     width: double.infinity,
                     child: OutlinedButton(
                       onPressed: () {
-                        Get.to(SignupScreen());
+                        Get.to(const SignupScreen());
                       },
                       child: const Text(FTexts.createAccount),
                     ),
@@ -175,7 +174,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Flexible(child: Divider()),
+                  const Flexible(child: Divider()),
                   const SizedBox(
                     width: 10,
                   ),
@@ -186,7 +185,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(
                     width: 10,
                   ),
-                  Flexible(child: Divider()),
+                  const Flexible(child: Divider()),
                 ],
               ),
               const SizedBox(

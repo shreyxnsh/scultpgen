@@ -2,8 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'package:sculptgen/features/authentication/screens/home.dart';
-import 'package:sculptgen/features/authentication/screens/login.dart';
 import 'package:sculptgen/features/authentication/screens/logo_with_title.dart';
 import 'package:sculptgen/navigationmenu.dart';
 import 'package:sculptgen/providers/user_provider.dart';
@@ -59,11 +57,11 @@ class _VerificationScreenState extends State<VerificationScreen> {
                         .confirmSignUp(username: widget.username, code: _otpcode);
             
                     result.fold((error) => context.showError(error), (_) {
-                      Get.to(NavigationMenuScreen());
+                      Get.to(const NavigationMenuScreen());
                     });
                   }
                 },
-                child: context.watch<UserProvider>().isLoading ? CircularProgressIndicator(color: Colors.white,)
+                child: context.watch<UserProvider>().isLoading ? const CircularProgressIndicator(color: Colors.white,)
                 : const Text("Validate"),
               ),
             ),

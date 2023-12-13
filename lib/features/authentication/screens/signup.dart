@@ -45,7 +45,7 @@ class _SignupScreenState extends State<SignupScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(FSizes.defaultSpace),
+          padding: const EdgeInsets.all(FSizes.defaultSpace),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -204,7 +204,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         width: double.infinity,
                         child: OutlinedButton(
                           onPressed: () {
-                            Get.to(LoginScreen());
+                            Get.to(const LoginScreen());
                           },
                           child: const Text(FTexts.alreadylogin),
                         ),
@@ -223,7 +223,7 @@ class _SignupScreenState extends State<SignupScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Flexible(child: Divider()),
+                  const Flexible(child: Divider()),
                   const SizedBox(
                     width: 10,
                   ),
@@ -234,7 +234,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   const SizedBox(
                     width: 10,
                   ),
-                  Flexible(child: Divider()),
+                  const Flexible(child: Divider()),
                 ],
               ),
               const SizedBox(
