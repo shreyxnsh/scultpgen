@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:provider/provider.dart';
-import 'package:sculptgen/features/authentication/screens/login.dart';
-import 'package:sculptgen/providers/user_provider.dart';
 import 'package:sculptgen/welcome.dart';
 
 

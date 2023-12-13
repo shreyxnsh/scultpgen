@@ -206,7 +206,7 @@ class Message extends Model {
     modelSchemaDefinition.authRules = [
       AuthRule(
         authStrategy: AuthStrategy.PRIVATE,
-        operations: [
+        operations: const [
           ModelOperation.READ,
           ModelOperation.CREATE
         ])

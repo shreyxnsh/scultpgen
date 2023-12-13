@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:provider/provider.dart';
 import 'package:sculptgen/common/widgets/appbar/appbar.dart';
-import 'package:sculptgen/common/widgets/appbar/home_appbar.dart';
-import 'package:sculptgen/features/authentication/screens/login.dart';
-import 'package:sculptgen/providers/user_provider.dart';
 import 'package:sculptgen/utils/constants/sizes.dart';
 
 class ToolScreen extends StatelessWidget {
@@ -13,7 +7,7 @@ class ToolScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return  const Scaffold(
       appBar: FAppBar(title: Text("Tools"),),
       body: SingleChildScrollView(
         child: Column(
